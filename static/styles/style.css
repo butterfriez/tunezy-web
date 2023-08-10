@@ -1,0 +1,87 @@
+:root {
+    --backgroud-color: #1B1B1E;
+    --background-dark: #282d39;
+    --background-light: #D8DBE2;
+    --text-color: white;
+    --svg-fill: white;
+}
+
+html {
+    height: 100%;
+}
+
+* {
+    margin: 0 0 0 0;
+}
+
+body {
+    background-color: var(--backgroud-color);
+    min-height: 100%;
+
+    display: grid;
+    column-gap: 5px;
+    row-gap: 5px;
+    grid-template-columns: 200px auto 200px;
+    grid-template-rows: 60px auto 100px 100px;
+    grid-template-areas: 
+    "navbar navbar navbar"
+    "first first right-nav"
+    "ad footer footer"
+    "ad player player";
+}
+
+.light {
+    color: var(--backgroud-color);
+    background-color: var(--background-light);
+}
+
+.dark {
+    color: var(--text-color);
+    background-color: var(--background-dark);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+
+    grid-area: navbar;
+}
+
+main {
+    border-radius: 10px;
+
+    grid-area: first;
+}
+
+.right-container {
+    border-radius: 10px;
+
+    grid-area: right-nav;
+}
+
+.ad {
+    grid-area: ad;
+}
+
+.player {
+    grid-area: player;
+}
+
+footer {
+    border-radius: 10px;
+    
+    grid-area: footer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer div {
+    height: 100%;
+}
+
+footer .fr-icons svg {
+    fill: var(--svg-fill);
+}
