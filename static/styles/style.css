@@ -49,6 +49,13 @@ body {
     grid-area: navbar;
 }
 
+.nav-right {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+}
+
 main {
     border-radius: 10px;
 
